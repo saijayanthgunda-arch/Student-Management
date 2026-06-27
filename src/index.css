@@ -1,0 +1,143 @@
+/* ========================================
+   CSS Reset & Design Tokens — Pastel Kawaii Theme
+   ======================================== */
+:root {
+  /* Pastel Palette */
+  --bg-primary: #f3ecf8;
+  --bg-secondary: #ece3f3;
+  --bg-card: #ffffff;
+  --bg-card-hover: #faf6ff;
+  --bg-input: #f5f0fa;
+
+  /* Purple spectrum */
+  --purple-100: #f3ecf8;
+  --purple-200: #e8d9f0;
+  --purple-300: #d4b8e8;
+  --purple-400: #c19ee0;
+  --purple-500: #a97dd4;
+  --purple-600: #9163c4;
+  --purple-700: #7b4fb3;
+
+  /* Accent colors */
+  --pink-soft: #f8c8dc;
+  --pink-medium: #f0a4c0;
+  --pink-bg: #fdf0f5;
+  --mint-soft: #b8e8cc;
+  --mint-bg: #eef8f2;
+  --blue-soft: #a8cce8;
+  --blue-bg: #eef4fa;
+  --yellow-soft: #f5e0a0;
+  --yellow-bg: #fdf8ec;
+  --orange-soft: #f0b87c;
+  --coral-soft: #f4a89c;
+
+  /* Gradients */
+  --gradient-purple: linear-gradient(135deg, #c9a0e8 0%, #a97dd4 100%);
+  --gradient-pink: linear-gradient(135deg, #f8c8dc 0%, #e8a0c0 100%);
+  --gradient-header: linear-gradient(135deg, #d8c0f0 0%, #c8a8e8 50%, #e0b8d8 100%);
+  --gradient-btn: linear-gradient(135deg, #b88cda 0%, #a070cc 50%, #9060c0 100%);
+
+  /* Text */
+  --text-primary: #3a2d50;
+  --text-secondary: #7a6d90;
+  --text-muted: #a89dbc;
+  --text-on-purple: #ffffff;
+
+  /* Borders */
+  --border-color: #e8ddf0;
+  --border-focus: #c19ee0;
+
+  /* Semantic */
+  --success: #6ec890;
+  --warning: #e8b44c;
+  --danger: #e87c7c;
+  --danger-bg: #fdeaea;
+
+  /* Shadows — soft, pastel */
+  --shadow-sm: 0 2px 8px rgba(160, 130, 200, 0.1);
+  --shadow-md: 0 4px 16px rgba(160, 130, 200, 0.12);
+  --shadow-lg: 0 8px 32px rgba(160, 130, 200, 0.15);
+  --shadow-card: 0 4px 20px rgba(160, 130, 200, 0.1), 0 1px 4px rgba(160, 130, 200, 0.08);
+  --shadow-btn: 0 4px 14px rgba(140, 100, 200, 0.25);
+  --shadow-inset: inset 0 2px 6px rgba(160, 130, 200, 0.08);
+
+  /* Radius — generous and rounded */
+  --radius-sm: 12px;
+  --radius-md: 16px;
+  --radius-lg: 20px;
+  --radius-xl: 24px;
+  --radius-pill: 100px;
+
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-normal: 250ms ease;
+  --transition-bounce: 350ms cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  font-family: 'Nunito', system-ui, -apple-system, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  min-height: 100vh;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Soft radial glow background */
+body::before {
+  content: '';
+  position: fixed;
+  top: -20%;
+  right: -10%;
+  width: 60%;
+  height: 60%;
+  background: radial-gradient(circle, rgba(200, 160, 232, 0.2), transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  bottom: -10%;
+  left: -10%;
+  width: 50%;
+  height: 50%;
+  background: radial-gradient(circle, rgba(248, 200, 220, 0.15), transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+#root {
+  position: relative;
+  z-index: 1;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--purple-300);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--purple-400);
+}
